@@ -1,3 +1,11 @@
+# AI_Brochures Application
+
+<b> Create captivating business or organization brochures using website information </b>
+
+
+
+
+
 ---
 title: AI Brochures
 emoji: 🎨
@@ -11,4 +19,3 @@ license: apache-2.0
 short_description: Create captivating  brochures for your organization using AI 
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
