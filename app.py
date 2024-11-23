@@ -75,7 +75,7 @@ def get_links(url):
     return json.loads(result)
 
 #all the content required to generate information from user about the website
-@st.cache_resource
+@st.cache_resource  # use the cached data to resond to the second query rather than scraping the website again 
 def get_all_details(url):
     result = "Home page:\n"
     result += Website(url).get_contents()
@@ -102,7 +102,7 @@ def get_brochure_user_prompt(company_name, url):
     user_prompt = f"You are looking at a company called: {company_name}\n"
     user_prompt += f"Here are the contents of its landing page and other relevant pages; use this information to build a short brochure of the company in markdown and provide usable links in the contacts areas \n"
     user_prompt += get_all_details(url)
-    user_prompt = user_prompt[:20_000] # Truncate if more than 20,000 characters
+    user_prompt = user_prompt[:30_000] # Truncate if more than 30,000 characters
     return user_prompt
 
 # Initialize Groq client
@@ -112,7 +112,7 @@ client = Groq(api_key=api_key)
 
 # Streamlit UI
 st.title("AI Brochures 🎨📌")
-st.write("Create a captivating brochure of your company or institution by only using information from your website!!")
+st.write("Create a captivating brochure for your company or institution by only using information from your website!!")
 
 # Input fields
 system= st.text_input("Modify the model response using a custom system prompt if not satisfied with generated response:" , " "  )
@@ -150,11 +150,7 @@ if user_query:
                 st.error(f"Failed to process query to model: {e}")
             response = ""
             try:
-                # for chunk in chat_streaming:
-                #     content = chunk.choices[0].delta.content
-                #     if content:  # Ensure content is not None
                 response=chat_streaming.choices[0].message.content
-                # response += content
                 st.write("🤖:")
                 st.write(response)
             except Exception as e:
