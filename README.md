@@ -1,4 +1,4 @@
-# AI_Brochures Application 🎨
+# AI_Brochures App 🎨
 
 <b> Create captivating business or organization brochures using website information </b>
 
