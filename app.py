@@ -115,7 +115,7 @@ st.title("AI Brochures 🎨📌")
 st.write("Create a captivating brochure of your company or institution by only using information from your website!!")
 
 # Input fields
-system= st.text_input("Modify the model response using a custom system prompt if not satisfied with generated response": , " "  )
+system= st.text_input("Modify the model response using a custom system prompt if not satisfied with generated response:" , " "  )
 url = st.text_input("Provide the Company's website URL:", " " )
 user_query = st.text_area("Provide a title for the brochure or the name of the organization")
 
