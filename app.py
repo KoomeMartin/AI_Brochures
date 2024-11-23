@@ -91,11 +91,11 @@ system_prompt = "You are an assistant that analyzes the contents of several rele
 and creates a short brochure about the company for prospective customers, investors and recruits. Respond in markdown.\
 Include details of company culture, customers and careers/jobs if you have the information."
 
-def second_call_sytem_prompt(system):
-    if len(system) == 0:
-        return system_prompt
-    else:
+def second_call_sytem_prompt(system=None):
+    if system:
         return system
+    else:
+        return system_prompt
 
 
 def get_brochure_user_prompt(company_name, url):
