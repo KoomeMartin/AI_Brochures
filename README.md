@@ -1,6 +1,6 @@
 ---
 title: AI Brochures
-emoji: 👁
+emoji: 🎨
 colorFrom: red
 colorTo: pink
 sdk: streamlit
