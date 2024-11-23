@@ -43,7 +43,7 @@ link_system_prompt += """
     "links": [
         {"type": "about page", "url": "https://full.url/goes/here/about"},
         {"type": "careers page": "url": "https://another.full.url/careers"},
-        {"type": "contanct us" : "url" : "mailto:company@gmail.com"}
+        # {"type": "contanct us" : "url" : "mailto:company@gmail.com"}
     ]
 }
 """
