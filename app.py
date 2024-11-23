@@ -2,6 +2,7 @@ import streamlit as st
 from bs4 import BeautifulSoup
 import requests
 from groq import Groq
+from dotenv import load_dotenv
 import os
 import json
 
@@ -105,7 +106,7 @@ def get_brochure_user_prompt(company_name, url):
     return user_prompt
 
 # Initialize Groq client
-# load_dotenv()
+load_dotenv()
 api_key = os.getenv('GROQ_API_KEY')
 client = Groq(api_key=api_key)
 
