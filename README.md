@@ -1,21 +1,12 @@
-# AI_Brochures Application
+# AI_Brochures Application 🎨
 
 <b> Create captivating business or organization brochures using website information </b>
 
+Used advanced web scraping techniques using `BeautifulSoup` to scrape website information and pass it to `llama-70b` model to create a brochure that can be used for advertisements and major organisation events.
+
+This app is currently hosted on <a href='https://huggingface.co/spaces/Koomemartin/AI_Brochures'>HuggingFace</a> Spaces
 
 
 
 
----
-title: AI Brochures
-emoji: 🎨
-colorFrom: red
-colorTo: pink
-sdk: streamlit
-sdk_version: 1.40.1
-app_file: app.py
-pinned: false
-license: apache-2.0
-short_description: Create captivating  brochures for your organization using AI 
----
 
