@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import requests
 from groq import Groq
 import os
-from dotenv import load_dotenv
 import json
 
 # scraping pipeline
